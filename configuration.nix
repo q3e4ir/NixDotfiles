@@ -78,24 +78,24 @@
   };
 
   environment.systemPackages = with pkgs; [
-  kitty
-  wofi
-  git
-  firefox-wayland
-  neovim
-  gcc
-  pulseaudio
-  neofetch
-  pavucontrol
-  waybar
-  unzip
-  hyprpaper
-  pamixer
+    kitty
+    wofi
+    git
+    firefox-wayland
+    neovim
+    gcc
+    pulseaudio
+    neofetch
+    pavucontrol
+    waybar
+    unzip
+    hyprpaper
+    pamixer
   ];
 
   #Hyprland settings
   programs.hyprland.enable = true;
-  programs.steam.enable = true;
+  #programs.steam.enable = true;
 
   #Fonts settings
   fonts.packages = with pkgs; [
