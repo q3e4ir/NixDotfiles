@@ -95,6 +95,7 @@
 
   #Hyprland settings
   programs.hyprland.enable = true;
+  programs.steam.enable = true;
 
   #Fonts settings
   fonts.packages = with pkgs; [
