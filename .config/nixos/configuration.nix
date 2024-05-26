@@ -49,34 +49,6 @@
     VISUAL = "codium";
   };
 
-  environment.systemPackages = with pkgs; [
-    kitty
-    wofi
-    git
-    firefox-wayland
-    pulseaudio
-    neofetch
-    pavucontrol
-    waybar
-    unzip
-    hyprpaper
-    pamixer
-    networkmanagerapplet
-    cinnamon.nemo-with-extensions
-    gnome.gnome-tweaks
-    vscodium
-    polkit
-    polkit_gnome
-    lxsession
-    loupe
-    telegram-desktop
-    discord
-    ntfs3g
-    qbittorrent
-  ];
-
-  programs.hyprland.enable = true;
-
   fonts.packages = with pkgs; [
      (nerdfonts.override {
         fonts = [
@@ -84,6 +56,40 @@
         ];
       })
   ];
+
+  environment.systemPackages = with pkgs; [
+
+    #CLI
+    git
+    neofetch
+    unzip
+    ntfs3g
+    polkit
+    polkit_gnome
+    lxsession
+
+    #Software
+    firefox-wayland
+    kitty
+    vscodium
+    cinnamon.nemo-with-extensions
+    telegram-desktop
+    discord
+    qbittorrent
+
+    #UTILS
+    waybar
+    hyprpaper
+    wofi
+    pulseaudio
+    pavucontrol
+    pamixer
+    networkmanagerapplet
+    gnome.gnome-tweaks
+    loupe
+  ];
+
+  programs.hyprland.enable = true;
 
   system.stateVersion = "23.11";
 }
